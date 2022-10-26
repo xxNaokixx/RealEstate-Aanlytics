@@ -7,6 +7,9 @@ from sklearn.linear_model import LinearRegression as LR
 
 from sklearn import preprocessing
 
+
+
+#データの前処理----------------------------------------------------
 data = pd.read_excel("SUUMOスクレイピング.xlsx")
 
 #データを分割
@@ -34,6 +37,11 @@ data_updated2["築年数数字"] = data_updated2["築年数数字"].astype('int'
 data_updated2["家賃金額"] = data_updated2["家賃金額"].astype('float')
 
 data_complete = data_updated2
+
+#データの前処理----------------------------------------------------
+
+
+#重回帰分析-------------------------------------------------------
 
 df = data_complete
 
@@ -73,6 +81,11 @@ model.intercept_
 
 model.score(target_data, df_train)
 
+#重回帰分析-------------------------------------------------------
+
+
+#ユーザーのインプットを受け取り、散布図で表示---------------------------
+
 #後で確認
 plt.scatter(data_complete["家賃金額"], data_complete["平米数"])
 
@@ -107,3 +120,6 @@ plot_data = plt.scatter(merged_data["家賃金額"], merged_data["平米数"], c
 
 plt.scatter(merged_data["家賃金額"], merged_data["平米数"], c="b", label="世の中の平均")
 plt.scatter(user_input_yachin, user_input_m2, c="r", label="あなたのデータ") 
+
+
+#ユーザーのインプットを受け取り、散布図で表示---------------------------
