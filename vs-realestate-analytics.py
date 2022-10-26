@@ -7,6 +7,9 @@ from sklearn.linear_model import LinearRegression as LR
 
 from sklearn import preprocessing
 
+import seaborn as sns
+from sklearn.linear_model import LinearRegression
+
 
 
 #データの前処理----------------------------------------------------
@@ -123,3 +126,26 @@ plt.scatter(user_input_yachin, user_input_m2, c="r", label="あなたのデー�
 
 
 #ユーザーのインプットを受け取り、散布図で表示---------------------------
+
+
+#単回帰分析-------------------------------------------------------
+x = target_data
+y = df[1]
+
+plt.plot(x, y, 'o')
+plt.show()
+
+model_lr = LinearRegression()
+
+model_lr.fit(x, y)
+
+plt.plot(x, y, 'o')
+plt.plot(x, model_lr.predict(x), linestyle="solid")
+plt.show()
+
+print('モデル関数の回帰変数 w1: %.3f' %model_lr.coef_)
+print('モデル関数の切片 w2: %.3f' %model_lr.intercept_)
+print('y= %.3fx + %.3f' % (model_lr.coef_ , model_lr.intercept_))
+print('決定係数 R^2： ', model_lr.score(x, y))
+
+#単回帰分析-------------------------------------------------------
