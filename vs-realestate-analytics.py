@@ -157,3 +157,17 @@ dfdf3 = pd.DataFrame(test["平米数"])
 pred = model_lr.predict(dfdf3)
 pred2 = pd.DataFrame(pred)
 pred2
+
+##インプットから推論
+
+user_input_m2 = int(input("平米数を書いてね"))
+
+
+user_input_m22 = pd.DataFrame(
+                 {'列名1':[user_input_m2]},
+                 index = ['１']
+                  )
+
+input_pred = model_lr.predict(user_input_m22)
+input_pred2 = pd.DataFrame(input_pred)
+input_pred2
