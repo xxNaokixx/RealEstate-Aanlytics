@@ -128,9 +128,12 @@ plt.scatter(user_input_yachin, user_input_m2, c="r", label="あなたのデー�
 #ユーザーのインプットを受け取り、散布図で表示---------------------------
 
 
-#単回帰分析-------------------------------------------------------
-x = target_data
-y = df[1]
+#単回帰分析2 -------------------------------------------------------
+dfdf = pd.DataFrame(train["家賃金額"])
+dfdf2 = pd.DataFrame(train["平米数"])
+
+x = dfdf2
+y = dfdf
 
 plt.plot(x, y, 'o')
 plt.show()
@@ -148,4 +151,12 @@ print('モデル関数の切片 w2: %.3f' %model_lr.intercept_)
 print('y= %.3fx + %.3f' % (model_lr.coef_ , model_lr.intercept_))
 print('決定係数 R^2： ', model_lr.score(x, y))
 
+
 #単回帰分析-------------------------------------------------------
+
+##予測
+
+dfdf3 = pd.DataFrame(test["平米数"])
+pred = model_lr.predict(dfdf3)
+pred2 = pd.DataFrame(pred)
+pred2
