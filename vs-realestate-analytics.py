@@ -148,9 +148,6 @@ print('モデル関数の切片 w2: %.3f' %model_lr.intercept_)
 print('y= %.3fx + %.3f' % (model_lr.coef_ , model_lr.intercept_))
 print('決定係数 R^2： ', model_lr.score(x, y))
 
-
-
-
 ##予測
 
 dfdf3 = pd.DataFrame(test["平米数"])
@@ -161,8 +158,6 @@ pred2
 ##インプットから推論
 
 user_input_m2 = int(input("平米数を書いてね"))
-
-
 user_input_m22 = pd.DataFrame(
                  {'列名1':[user_input_m2]},
                  index = ['１']
