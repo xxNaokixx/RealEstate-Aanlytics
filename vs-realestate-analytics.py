@@ -2,11 +2,8 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt 
 %matplotlib inline
-
 from sklearn.linear_model import LinearRegression as LR
-
 from sklearn import preprocessing
-
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 
