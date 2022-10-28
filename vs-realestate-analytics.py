@@ -149,7 +149,7 @@ print('y= %.3fx + %.3f' % (model_lr.coef_ , model_lr.intercept_))
 print('決定係数 R^2： ', model_lr.score(x, y))
 
 
-#単回帰分析-------------------------------------------------------
+
 
 ##予測
 
@@ -171,3 +171,5 @@ user_input_m22 = pd.DataFrame(
 input_pred = model_lr.predict(user_input_m22)
 input_pred2 = pd.DataFrame(input_pred)
 input_pred2
+
+#単回帰分析-------------------------------------------------------
