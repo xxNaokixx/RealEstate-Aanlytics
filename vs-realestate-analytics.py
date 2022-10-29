@@ -168,3 +168,6 @@ input_pred2 = pd.DataFrame(input_pred)
 input_pred2
 
 #単回帰分析-------------------------------------------------------
+
+
+#Streamlit Appでインプットを受け取り推論
